@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --nav-size: 4rem;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  @apply bg-neutral-50 text-neutral-900 antialiased;
+}
+
+/* 라벨 미리보기: PDF 는 Noto Sans KR 임베딩. 화면은 설치된 폰트 폴백 (정확한 폭은 PDF 생성 시 재측정) */
+.font-label {
+  font-family: "Noto Sans KR", "Noto Sans CJK KR", "Apple SD Gothic Neo", Pretendard, system-ui, sans-serif;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-1 rounded-md border border-neutral-300 bg-white px-3 py-1.5 text-sm font-medium hover:bg-neutral-100 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+.btn-primary {
+  @apply border-blue-600 bg-blue-600 text-white hover:bg-blue-700;
+}
+.btn-danger {
+  @apply border-red-300 text-red-700 hover:bg-red-50;
+}
+.input {
+  @apply w-full rounded-md border border-neutral-300 bg-white px-2 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+.card {
+  @apply rounded-lg border border-neutral-200 bg-white p-4 shadow-sm;
+}
+.label {
+  @apply block text-xs font-medium text-neutral-600 mb-1;
+}
+.badge {
+  @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+}
